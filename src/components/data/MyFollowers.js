@@ -9,6 +9,7 @@ export const Members={
             followData:'2h',
             level:'حرفه ای',
             postCount:121,
+            notifictios:false,
             posts:[
                 {
                     id: 1,
@@ -261,7 +262,7 @@ export const Members={
         },
         {
             firsName:'امیروسین',
-            lastName:'علی نقی بیگی',
+            lastName:' ',
             id:2,
             image:'',
             isFollowed:true,

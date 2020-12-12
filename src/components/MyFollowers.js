@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import * as mi from '@material-ui/core'
 import { useState } from 'react'
 import Followers from './Followers'
+import IconButton from '@material-ui/core/IconButton';
 
 const MainColor = "#0f1724";
 const SecondaryColor = "#1d2636";
@@ -11,7 +12,11 @@ const Red = "#a71753";
 const Yellow = "#f0b341";
 
 
+export const IconBtn = styled(IconButton)`
+color:${FadeWhite} !important;
+font-family:'irsans';
 
+`
 
 const MembersWrapper = styled.div`
  width: 100%;

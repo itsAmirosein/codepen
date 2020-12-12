@@ -6,6 +6,7 @@ import Context from "./context";
 import { MdSort, MdSearch } from "react-icons/md";
 import { Switch } from "@material-ui/core";
 import * as sc from "./styles/content";
+import { Link } from "react-router-dom";
 
 export default function Main() {
   const [value, setValue] = useState("");
@@ -14,10 +15,24 @@ export default function Main() {
   const { state, dispatch } = useContext(Context);
   const { isSort, suggested, filterData } = state;
 
+
+
+
   // handle input change
   const handleChange = (e) => {
     setValue(e.target.value);
+
+
   };
+  useEffect(() => {
+    value.split(' ').map(item => {
+      if(item.startsWith('@')){
+        return <span style={{color:'red'}}>{item}</span>
+      }else{
+        return item
+      }
+    })
+  },[value])
 
   // suggest data
   useEffect(() => {
